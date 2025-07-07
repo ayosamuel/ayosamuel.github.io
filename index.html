@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Adenigba | Analytics Engineer & Solar PV Professional</title>
+    <style>
+        /* --- Basic Setup & Typography --- */
+        :root {
+            --primary-color: #0d47a1; /* A strong, professional blue */
+            --secondary-color: #f5f5f5; /* Clean light gray for backgrounds */
+            --text-color: #333;
+            --accent-color: #ffc107; /* A subtle gold accent */
+            --header-font: 'Helvetica', 'Arial', sans-serif;
+            --body-font: 'Georgia', 'Times New Roman', serif;
+        }
+
+        body {
+            font-family: var(--body-font);
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--header-font);
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        h1 { font-size: 2.5em; margin-bottom: 10px; }
+        h2 { font-size: 2em; border-bottom: 3px solid var(--secondary-color); padding-bottom: 10px; margin-top: 50px; }
+        h3 { font-size: 1.4em; }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Header/Hero Section --- */
+        .hero {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            color: white;
+            font-size: 3em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.5em;
+            font-family: var(--header-font);
+            margin: 10px 0 25px 0;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .hero-links a {
+            color: white;
+            background-color: transparent;
+            padding: 12px 22px;
+            border-radius: 5px;
+            border: 2px solid white;
+            margin: 5px;
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .hero-links a:hover {
+            background-color: white;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        /* --- Profile Section --- */
+        .profile {
+            text-align: center;
+            padding: 40px 30px;
+            font-size: 1.1em;
+        }
+
+        /* --- Projects Section --- */
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 45px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 30px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 { margin-top: 0; }
+
+        .project-impact {
+            font-style: italic;
+            color: #555;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+            margin: 15px 0;
+        }
+        
+        .project-visual-placeholder {
+            width: 100%;
+            height: 280px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-family: var(--header-font);
+            font-style: italic;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .tech-stack {
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            background-color: #e8f0fe;
+            color: #1c52a3;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            font-family: var(--header-font);
+            margin: 4px;
+        }
+        
+        .project-links {
+            margin-top: auto; /* Pushes buttons to the bottom */
+            padding-top: 15px;
+        }
+
+        .project-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 18px;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-family: var(--header-font);
+            transition: opacity 0.3s;
+            border: none;
+            font-weight: bold;
+        }
+        .project-button:hover {
+            opacity: 0.85;
+            text-decoration: none;
+            color: white;
+        }
+
+        /* --- Skills Section --- */
+        #skills {
+            background-color: var(--secondary-color);
+            padding: 40px;
+            border-radius: 8px;
+        }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .skill-category {
+            flex: 1;
+            min-width: 250px;
+        }
+        .skill-category h3 {
+            margin-top: 0;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 8px;
+        }
+        .skill-list {
+            list-style: none;
+            padding: 0;
+        }
+        .skill-list li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+
+
+        /* --- Contact Section --- */
+        .contact {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #333;
+            color: white;
+            font-family: var(--header-font);
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <h1>SAMUEL ADENIGBA</h1>
+        <p>Analytics Engineer & Solar PV Professional</p>
+        <div class="hero-links">
+            <!-- ACTION: Replace '#' with the URL to your resume PDF -->
+            <a href="#" target="_blank">Download Resume</a>
+            <a href="https://www.linkedin.com/in/samuel-adeniqba-18ab4997/" target="_blank">LinkedIn</a>
+            <!-- ACTION: Replace '#' with your main GitHub profile URL -->
+            <a href="#" target="_blank">GitHub</a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- PROFILE SECTION -->
+        <section id="profile" class="profile">
+            <h2>Profile</h2>
+            <p>
+                Highly proficient and results-oriented analytics engineer with over eight years of professional experience in renewable (solar pv) energy systems and business operations. I develop and implement data models, pipelines and custom applications used by global team of engineers and solar asset managers. I have led over 1.5GW of Solar PV performance analytics, reporting to internal team leads and external clients.
+            </p>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects">
+            <h2>Work Experience & Projects</h2>
+            <div class="project-grid">
+
+                <!-- --- PROJECT 1: Automated Performance Analytics Pipeline --- -->
+                <article class="project-card">
+                    <h3>Automated Performance Evaluation Pipeline</h3>
+                    <p>Developed data models, tools, and pipelines for the automated evaluation of constructed utility solar photovoltaic power stations.</p>
+                    <p class="project-impact"><strong>Key Result:</strong> Reduced the time to deliver reliable site performance metrics from 6-8 weeks to just 2 weeks post-energization, accelerating the achievement of contractual acceptance tests.</p>
+                    
+                    <!-- ACTION: Replace this div with an image or video -->
+                    <div class="project-visual-placeholder">Visual Placeholder: Architecture Diagram of the Pipeline</div>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span><span class="tech-tag">PVsyst</span><span class="tech-tag">SQL</span><span class="tech-tag">dbt</span><span class="tech-tag">Analytics Engineering</span>
+                    </div>
+                    <div class="project-links">
+                        <!-- ACTION: Replace '#' with the link to this project's sanitized GitHub repo -->
+                        <a href="#" class="project-button" target="_blank">View on GitHub</a>
+                    </div>
+                </article>
+
+                <!-- --- PROJECT 2: End-to-End Meteorological Data App --- -->
+                <article class="project-card">
+                    <h3>Meteorological Data Management Solution</h3>
+                    <p>Developed and deployed a Microsoft Power Apps & SQL Server database solution to streamline and automate data flows for process efficiency and master data management.</p>
+                     <p class="project-impact"><strong>Key Result:</strong> Replaced a manual, siloed process, creating an end-to-end solution for global engineering teams to request and analyze meteorological data in Power BI for simulations.</p>
+                    
+                    <!-- ACTION: Replace this div with an image or video -->
+                    <div class="project-visual-placeholder">Visual Placeholder: Screenshot of the Power App Interface</div>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">Power Apps</span><span class="tech-tag">Power Automate</span><span class="tech-tag">SQL Server</span><span class="tech-tag">Power BI</span>
+                    </div>
+                     <div class="project-links">
+                        <!-- ACTION: Link to a blog post explaining the build, or a GitHub repo if applicable -->
+                        <a href="#" class="project-button" target="_blank">View Case Study</a>
+                    </div>
+                </article>
+
+                <!-- --- PROJECT 3: Predictive & Root Cause Analysis Models --- -->
+                <article class="project-card">
+                    <h3>Predictive Analysis of Solar PV Systems</h3>
+                    <p>Developed statistical and machine learning models for predictive and root cause analysis of Solar PV system topics, including soiling loss, overload ratios, and inverter string distribution.</p>
+                   <p class="project-impact"><strong>Key Result:</strong> Produced key insights into component efficiency and temperature effects, directly informing operational strategy and future design optimization.</p>
+                    
+                   <!-- ACTION: Replace this div with an image or video -->
+                    <div class="project-visual-placeholder">Visual Placeholder: Graph of Soiling Loss Analysis</div>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span><span class="tech-tag">Machine Learning</span><span class="tech-tag">Statistical Modelling</span>
+                    </div>
+                     <div class="project-links">
+                        <!-- ACTION: Replace '#' with the link to this project's sanitized GitHub repo -->
+                         <a href="#" class="project-button" target="_blank">View on GitHub</a>
+                    </div>
+                </article>
+                
+                 <!-- --- PROJECT 4: Volunteer Process Automation --- -->
+                <article class="project-card">
+                    <h3>Process Automation & Database Development</h3>
+                    <p>As a volunteer, developed an automated system for project management and efficient communication using Microsoft tools, alongside a Python-based tool to process and sort text by meaning and language.</p>
+                   <p class="project-impact"><strong>Key Result:</strong> Led to timely project implementation and an overall increase in process efficiency and data security for a multi-lingual audience.</p>
+                   
+                    <!-- ACTION: Replace this div with an image or video -->
+                    <div class="project-visual-placeholder">Visual Placeholder: Flowchart of the Automation Logic</div>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span><span class="tech-tag">Power Automate</span><span class="tech-tag">Microsoft Forms</span><span class="tech-tag">Databases</span>
+                    </div>
+                     <div class="project-links">
+                        <!-- ACTION: Replace '#' with the link to this project's sanitized GitHub repo -->
+                        <a href="#" class="project-button" target="_blank">View on GitHub</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills">
+            <h2>Core Competencies</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <ul class="skill-list">
+                        <li><strong>Programming & Data:</strong> Python (OOP & Data), PySpark, Git & Github</li>
+                        <li><strong>Databases:</strong> SQL Server, Snowflake, PostgreSQL, Mongo DB</li>
+                        <li><strong>Cloud Platforms:</strong> Azure Data Factory, Synapses Analytics, Fabric, Dataverse</li>
+                        <li><strong>DE & BI Tools:</strong> Dbt, Airflow, Power Automate, Power BI, Excel, Tableau</li>
+                        <li><strong>Domain Specific:</strong> PVsyst, SCADA layout & infrastructure Integration</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Professional Skills</h3>
+                    <ul class="skill-list">
+                        <li>Data Pipeline & Model Development</li>
+                        <li>Analytics Engineering</li>
+                        <li>Database/warehouse Development</li>
+                        <li>Power Apps & Automate Development</li>
+                        <li>SCADA & IoT System analytics</li>
+                        <li>Solar Power System modelling & Analysis</li>
+                        <li>Statistical & Machine learning modelling</li>
+                        <li>OOP (Object Oriented programming)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact">
+             <h2>Get In Touch</h2>
+             <p>I am actively exploring new opportunities and welcome the chance to discuss how my skills and experience can benefit your team.<br>Please feel free to reach out via email or connect with me on LinkedIn.</p>
+             <a href="mailto:ayo.adenigba@leitway.com" class="project-button">ayo.adenigba@leitway.com</a>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2024 Samuel Adenigba | Built with HTML & CSS</p>
+    </footer>
+
+</body>
+</html>
