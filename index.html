@@ -3,376 +3,753 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samuel Adenigba | Analytics Engineer & Solar PV Professional</title>
+    <title>Ayokunle Samuel Adenigba | Analytics Engineer & Power Platform Consultant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <style>
-        /* --- Basic Setup & Typography --- */
         :root {
-            --primary-color: #0d47a1; /* A strong, professional blue */
-            --secondary-color: #f5f5f5; /* Clean light gray for backgrounds */
-            --text-color: #333;
-            --accent-color: #ffc107; /* A subtle gold accent */
-            --header-font: 'Helvetica', 'Arial', sans-serif;
-            --body-font: 'Georgia', 'Times New Roman', serif;
+            --midnight: #021b3e;
+            --royal: #0f4fb4;
+            --sky: #e8f3ff;
+            --text-dark: #313139;
+            --text-muted: #5f6b7c;
+            --accent: #ffb400;
+            --surface: #ffffff;
+            --surface-soft: rgba(255,255,255,0.75);
+            --radius-lg: 20px;
+            --shadow-soft: 0 24px 48px rgba(14, 55, 126, 0.12);
+            --shadow-card: 0 16px 32px rgba(7, 28, 65, 0.14);
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
-            font-family: var(--body-font);
             margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-            color: var(--text-color);
+            font-family: 'Manrope', Arial, sans-serif;
+            color: var(--text-dark);
+            background: linear-gradient(180deg, #f6f8fc 0%, #eef3fb 40%, #ffffff 100%);
             line-height: 1.7;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', 'Times New Roman', serif;
+            margin: 0;
+            color: var(--midnight);
         }
 
-        h1, h2, h3 {
-            font-family: var(--header-font);
-            color: var(--primary-color);
-            font-weight: 700;
-        }
+        h1 { font-size: 3.4rem; letter-spacing: 0.04em; }
+        h2 { font-size: 2.4rem; margin-bottom: 24px; }
+        h3 { font-size: 1.5rem; }
 
-        h1 { font-size: 2.5em; margin-bottom: 10px; }
-        h2 { font-size: 2em; border-bottom: 3px solid var(--secondary-color); padding-bottom: 10px; margin-top: 50px; }
-        h3 { font-size: 1.4em; }
-
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* --- Header/Hero Section --- */
-        .hero {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .hero h1 {
-            color: white;
-            font-size: 3em;
+        p {
             margin: 0;
         }
-        .hero p {
-            font-size: 1.5em;
-            font-family: var(--header-font);
-            margin: 10px 0 25px 0;
-            font-weight: 300;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .hero-links a {
-            color: white;
-            background-color: transparent;
-            padding: 12px 22px;
-            border-radius: 5px;
-            border: 2px solid white;
-            margin: 5px;
-            display: inline-block;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .hero-links a:hover {
-            background-color: white;
-            color: var(--primary-color);
+
+        a {
+            color: inherit;
             text-decoration: none;
         }
 
-        /* --- Profile Section --- */
-        .profile {
-            text-align: center;
-            padding: 40px 30px;
-            font-size: 1.1em;
+        .page-shell {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 28px 80px;
         }
 
-        /* --- Projects Section --- */
-        .project-grid {
+        header.hero {
+            background: radial-gradient(circle at top right, rgba(15,79,180,0.75), rgba(2,27,62,0.92)), #021b3e;
+            color: #ffffff;
+            overflow: hidden;
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+            padding: 80px 28px 88px;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 12% -12% auto auto;
+            width: 340px;
+            height: 340px;
+            background: radial-gradient(circle, rgba(255,180,0,0.45) 0%, rgba(255,180,0,0) 70%);
+            opacity: 0.9;
+        }
+
+        .hero-content {
+            max-width: 1120px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 45px;
-            margin-top: 30px;
+            gap: 48px;
+        }
+
+        .hero-intro {
+            max-width: 760px;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.16);
+            border: 1px solid rgba(255,255,255,0.28);
+            backdrop-filter: blur(12px);
+            border-radius: 999px;
+            padding: 10px 20px;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+        }
+
+        .hero-intro h1 {
+            color: #d6b59a;
+            margin-top: 24px;
+            margin-bottom: 20px;
+        }
+
+        .hero-subhead {
+            font-size: 1.15rem;
+            color: rgba(233,237,247,0.85);
+            max-width: 620px;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 22px;
+            border-radius: 14px;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .cta-primary {
+            background: #fff;
+            color: var(--midnight);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .cta-secondary {
+            border: 1px solid rgba(255,255,255,0.35);
+            color: #fff;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 36px rgba(0,0,0,0.18);
+        }
+
+        .hero-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 18px;
+        }
+
+        .metric-card {
+            background: var(--surface-soft);
+            border-radius: 18px;
+            padding: 22px;
+            border: 1px solid rgba(255,255,255,0.18);
+            backdrop-filter: blur(18px);
+        }
+
+        .metric-card h3 {
+            font-size: 2.6rem;
+            margin-bottom: 6px;
+            color: #fff;
+        }
+
+        .metric-card span {
+            display: block;
+            font-family: 'Manrope', Arial, sans-serif;
+            color: rgba(54, 64, 83, 0.786);
+            font-weight: 500;
+        }
+
+        section {
+            margin-top: 96px;
+        }
+
+        .section-intro {
+            max-width: 760px;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .impact-strip {
+            margin-top: 32px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .impact-card {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 26px;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(15,79,180,0.08);
+        }
+
+        .impact-card h3 {
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+        }
+
+        .projects-grid {
+            margin-top: 48px;
+            display: grid;
+            gap: 42px;
         }
 
         .project-card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 30px;
-            border-radius: 8px;
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 42px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid rgba(15,79,180,0.12);
+            display: grid;
+            gap: 24px;
+        }
+
+        .project-header {
             display: flex;
             flex-direction: column;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-            transition: box-shadow 0.3s, transform 0.3s;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            gap: 12px;
         }
 
-        .project-card h3 { margin-top: 0; }
-
-        .project-impact {
-            font-style: italic;
-            color: #555;
-            border-left: 4px solid var(--accent-color);
-            padding-left: 15px;
-            margin: 15px 0;
+        .project-header span {
+            font-family: 'Manrope', Arial, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-size: 0.78rem;
+            color: var(--royal);
+            font-weight: 600;
         }
-        
-        .project-visual-placeholder {
+
+        .project-story {
+            display: grid;
+            gap: 18px;
+        }
+
+        .story-block {
+            border-left: 3px solid rgba(15,79,180,0.18);
+            padding-left: 18px;
+        }
+
+        .story-block strong {
+            display: block;
+            font-size: 0.95rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .project-outcome {
+            background: linear-gradient(135deg, rgba(15,79,180,0.1), rgba(255,180,0,0.12));
+            padding: 22px;
+            border-radius: 16px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            padding: 8px 16px;
+            border-radius: 999px;
+            background: var(--sky);
+            color: var(--royal);
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.02em;
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .project-links a {
+            font-weight: 600;
+            color: var(--royal);
+            border-bottom: 1px solid transparent;
+            transition: color 0.2s ease, border 0.2s ease;
+        }
+
+        .project-links a:hover {
+            color: var(--midnight);
+            border-bottom: 1px solid var(--accent);
+        }
+
+        .strengths-grid {
+            margin-top: 48px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 26px;
+        }
+
+        .strength-card {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            border: 1px solid rgba(15,79,180,0.08);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .strength-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 18px 0 0;
+            display: grid;
+            gap: 10px;
+            color: var(--text-muted);
+        }
+
+        .experience-timeline {
+            margin-top: 42px;
+            display: grid;
+            gap: 24px;
+        }
+
+        .timeline-item {
+            background: var(--surface);
+            border-left: 4px solid var(--royal);
+            padding: 22px 28px;
+            border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .timeline-item h3 {
+            margin-bottom: 6px;
+        }
+
+        .timeline-meta {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            letter-spacing: 0.04em;
+        }
+
+        .timeline-item p {
+            margin-top: 10px;
+            color: var(--text-muted);
+        }
+
+        .certifications {
+            margin-top: 42px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .cert-card {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 20px 24px;
+            border: 1px solid rgba(15,79,180,0.06);
+            box-shadow: var(--shadow-soft);
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .contact-section {
+            background: radial-gradient(circle at top left, rgba(15,79,180,0.16), rgba(15,79,180,0));
+            border-radius: var(--radius-lg);
+            padding: 46px;
+            margin-top: 72px;
+            display: grid;
+            gap: 18px;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .contact-section a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 22px;
+            border-radius: 999px;
+            background: var(--royal);
+            color: #fff;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            transition: transform 0.2s ease;
+        }
+
+        .contact-section a:hover {
+            transform: translateY(-2px);
+        }
+
+        footer {
+            padding: 32px 28px 54px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .project-image {
             width: 100%;
-            height: 280px;
-            background-color: #e9ecef;
+            border-radius: 16px;
+            object-fit: cover;
+            box-shadow: var(--shadow-soft);
+            cursor: zoom-in;
+        }
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(2, 27, 62, 0.85);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #6c757d;
-            font-family: var(--header-font);
-            font-style: italic;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            text-align: center;
+            padding: 24px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+            z-index: 999;
         }
 
-        .tech-stack {
-            margin: 20px 0;
-            flex-wrap: wrap;
+        .lightbox.is-visible {
+            opacity: 1;
+            visibility: visible;
         }
 
-        .tech-tag {
-            display: inline-block;
-            background-color: #e8f0fe;
-            color: #1c52a3;
-            padding: 6px 12px;
-            border-radius: 15px;
-            font-size: 0.9em;
-            font-family: var(--header-font);
-            margin: 4px;
-        }
-        
-        .project-links {
-            margin-top: auto; /* Pushes buttons to the bottom */
-            padding-top: 15px;
+        .lightbox img {
+            max-width: min(960px, 90vw);
+            max-height: 90vh;
+            border-radius: 16px;
+            box-shadow: var(--shadow-card);
         }
 
-        .project-button {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 12px 18px;
-            border-radius: 5px;
-            margin-right: 10px;
-            font-family: var(--header-font);
-            transition: opacity 0.3s;
+        .lightbox button {
+            position: absolute;
+            top: 18px;
+            right: 24px;
+            background: rgba(255,255,255,0.85);
             border: none;
-            font-weight: bold;
-        }
-        .project-button:hover {
-            opacity: 0.85;
-            text-decoration: none;
-            color: white;
-        }
-
-        /* --- Skills Section --- */
-        #skills {
-            background-color: var(--secondary-color);
-            padding: 40px;
-            border-radius: 8px;
-        }
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .skill-category {
-            flex: 1;
-            min-width: 250px;
-        }
-        .skill-category h3 {
-            margin-top: 0;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 8px;
-        }
-        .skill-list {
-            list-style: none;
-            padding: 0;
-        }
-        .skill-list li {
-            margin-bottom: 8px;
-            font-size: 1.05em;
+            border-radius: 999px;
+            padding: 10px 14px;
+            font-size: 1.4rem;
+            cursor: pointer;
+            color: var(--midnight);
+            box-shadow: var(--shadow-soft);
         }
 
+        @media (max-width: 768px) {
+            header.hero {
+                border-bottom-left-radius: 36px;
+                border-bottom-right-radius: 36px;
+                padding: 72px 24px;
+            }
 
-        /* --- Contact Section --- */
-        .contact {
-            text-align: center;
-            padding: 40px 20px;
-        }
+            h1 {
+                font-size: 2.6rem;
+            }
 
-        /* --- Footer --- */
-        footer {
-            text-align: center;
-            padding: 25px;
-            background-color: #333;
-            color: white;
-            font-family: var(--header-font);
-            font-size: 0.9em;
+            .project-card {
+                padding: 32px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- HERO SECTION -->
     <header class="hero">
-        <h1>SAMUEL ADENIGBA</h1>
-        <p>Analytics Engineer & Solar PV Professional</p>
-        <div class="hero-links">
-            <!-- ACTION: Replace '#' with the URL to your resume PDF -->
-            <a href="#" target="_blank">Download Resume</a>
-            <a href="https://www.linkedin.com/in/samuel-adeniqba-18ab4997/" target="_blank">LinkedIn</a>
-            <!-- ACTION: Replace '#' with your main GitHub profile URL -->
-            <a href="#" target="_blank">GitHub</a>
+        <div class="hero-content">
+            <div class="hero-intro">
+                <span class="hero-eyebrow">Data Analytics Engineering • Business Digitalization & Automation • Energy & Electricity Systems</span>
+                <h1>Ayokunle Samuel Adenigba</h1>
+                <p class="hero-subhead">Impact-driven analytics engineer and Microsoft Power Platform consultant, empowering systems and operations with reliable decision intelligence, data products, business process automation and optimization.</p>
+                <div class="hero-cta">
+                    <a class="cta-button cta-primary" href="CV_Ayokunle_Data_Analytics_PowerPlatform_Python.pdf" target="_blank" rel="noopener">Download Master CV</a>
+                    <a class="cta-button cta-secondary" href="https://www.linkedin.com/in/samuel-adenigba-18ab4997/" target="_blank" rel="noopener">LinkedIn Profile</a>
+                </div>
+            </div>
+            <div class="hero-metrics">
+                <div class="metric-card">
+                    <h3>~1.5GW</h3>
+                    <span>Solar PV analytics delivered</span>
+                </div>
+                <div class="metric-card">
+                    <h3>50%</h3>
+                    <span>Average reduction in time from data acquisition to decision-making</span>
+                </div>
+                <div class="metric-card">
+                    <h3>8+ yrs</h3>
+                    <span>Delivering enterprise analytics and business solutions</span>
+                </div>
+            </div>
         </div>
     </header>
 
-    <div class="container">
+    <main class="page-shell">
 
-        <!-- PROFILE SECTION -->
-        <section id="profile" class="profile">
-            <h2>Profile</h2>
-            <p>
-                Highly proficient and results-oriented analytics engineer with over eight years of professional experience in renewable (solar pv) energy systems and business operations. I develop and implement data models, pipelines and custom applications used by global team of engineers and solar asset managers. I have led over 1.5GW of Solar PV performance analytics, reporting to internal team leads and external clients.
-            </p>
+        <section id="about">
+            <h2>Professional Signature</h2>
+            <p class="section-intro">I design and operationalize analytics ecosystems that give engineering and commercial stakeholders confidence in every milestone—from site design to grid connection. With deep solar PV domain knowledge, modern data engineering practices, and Microsoft Power Platform expertise, I design experiences that unite data rigour, visual storytelling, and stakeholder adoption.</p>
+            <div class="impact-strip">
+                <div class="impact-card">
+                    <h3>Enterprise-grade orchestration</h3>
+                    <p>Architected pipelines and governance for meteorological, SCADA, and commercial datasets powering global engineering teams.</p>
+                </div>
+                <div class="impact-card">
+                    <h3>Human-centered adoption</h3>
+                    <p>Guided international users through training, documentation, and ALM frameworks to sustain high-impact analytics products.</p>
+                </div>
+                <div class="impact-card">
+                    <h3>Decision intelligence</h3>
+                    <p>Delivered dashboards and predictive models that de-risked portfolio planning and accelerated commissioning decisions.</p>
+                </div>
+            </div>
         </section>
 
-        <!-- PROJECTS SECTION -->
         <section id="projects">
-            <h2>Work Experience & Projects</h2>
-            <div class="project-grid">
+            <h2>Flagship Data Solutions Narratives</h2>
+            <p class="section-intro">Each initiative began with a bottleneck inside a multi-GW renewable energy portfolio. By pairing analytics engineering with Power Platform craftsmanship, I orchestrated solutions that move critical decisions forward days or weeks faster.</p>
 
-                <!-- --- PROJECT 1: Automated Performance Analytics Pipeline --- -->
+            <div class="projects-grid">
+
                 <article class="project-card">
-                    <h3>Automated Performance Evaluation Pipeline</h3>
-                    <p>Developed data models, tools, and pipelines for the automated evaluation of constructed utility solar photovoltaic power stations.</p>
-                    <p class="project-impact"><strong>Key Result:</strong> Reduced the time to deliver reliable site performance metrics from 6-8 weeks to just 2 weeks post-energization, accelerating the achievement of contractual acceptance tests.</p>
-                    
-                    <!-- ACTION: Replace this div with an image or video -->
-                    <div class="project-visual-placeholder">Visual Placeholder: Architecture Diagram of the Pipeline</div>
-
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python</span><span class="tech-tag">PVsyst</span><span class="tech-tag">SQL</span><span class="tech-tag">dbt</span><span class="tech-tag">Analytics Engineering</span>
+                    <div class="project-header">
+                        <span>ib vogt GmbH • Solar PV Project Data Management</span>
+                        <h3>Global Meteorological Intelligence on Demand</h3>
+                    </div>
+                    <img class="project-image" src="assets/images/global-meteorological-intelligence.png" alt="Placeholder visual for Global Meteorological Intelligence on Demand">
+                    <div class="project-story">
+                        <div class="story-block">
+                            <strong>The Challenge</strong>
+                            <p>Business Stakeholders: Experience increased costs and investment risks from repeated data purchases and unreliable modeling inputs.
+                                <br>Project Engineers: Face simulation inaccuracies and project delays due to inconsistent, fragmented access to historical weather data.
+                                <br>Data team: Become overwhelmed by manual ingestion tasks and repeated requests, with no scalable or automated workflow in place.</p>
+                        </div>
+                        <div class="story-block">
+                            <strong>The Build</strong>
+                            <p>Implement a centralized, traceable, and efficient process for managing historical meteorological data to support accurate simulations and reduce redundant data requests.</p>
+                        </div>
+                        <div class="project-outcome">
+                            <strong>Impact</strong>
+                            <p>Avoided cost of redundant purchase of data. Data aquisition workflow reduced by roughly 50%, giving engineers self-service confidence and ensuring modelling windows were met without escalation.</p>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Power Apps</span>
+                        <span class="tag">Dataverse</span>
+                        <span class="tag">SQL Server</span>
+                        <span class="tag">Power Automate</span>
+                        <span class="tag">Power BI</span>
                     </div>
                     <div class="project-links">
-                        <!-- ACTION: Replace '#' with the link to this project's sanitized GitHub repo -->
-                        <a href="#" class="project-button" target="_blank">View on GitHub</a>
+                        <a href="assets/docs/global-meteorological-summary.pdf" target="_blank" rel="noopener">Download project summary</a>
+                        <a href="mailto:ayo.adenigba@leitway.com">Request a walkthrough</a>
                     </div>
                 </article>
 
-                <!-- --- PROJECT 2: End-to-End Meteorological Data App --- -->
                 <article class="project-card">
-                    <h3>Meteorological Data Management Solution</h3>
-                    <p>Developed and deployed a Microsoft Power Apps & SQL Server database solution to streamline and automate data flows for process efficiency and master data management.</p>
-                     <p class="project-impact"><strong>Key Result:</strong> Replaced a manual, siloed process, creating an end-to-end solution for global engineering teams to request and analyze meteorological data in Power BI for simulations.</p>
-                    
-                    <!-- ACTION: Replace this div with an image or video -->
-                    <div class="project-visual-placeholder">Visual Placeholder: Screenshot of the Power App Interface</div>
-                    
-                    <div class="tech-stack">
-                        <span class="tech-tag">Power Apps</span><span class="tech-tag">Power Automate</span><span class="tech-tag">SQL Server</span><span class="tech-tag">Power BI</span>
+                    <div class="project-header">
+                        <span>ib vogt GmbH • SCADA & Sensor Data Modeling</span>
+                        <h3>Solar Performance Pipeline and Analytics</h3>
                     </div>
-                     <div class="project-links">
-                        <!-- ACTION: Link to a blog post explaining the build, or a GitHub repo if applicable -->
-                        <a href="#" class="project-button" target="_blank">View Case Study</a>
+                    <img class="project-image" src="assets/images/solar-performance-pipeline.png" alt="Placeholder visual for Solar Performance Pipeline and Analytics">
+                    <div class="project-story">
+                        <div class="story-block">
+                            <strong>The Challenge</strong>
+                            <p>Performance tests reporting was fragmented across managers and regions; site and SCADA data and systems format varied across different providers; analytics were manual and slow; stakeholders (asset owners, advisors, EPC, O&M) needed timely, defensible results to hit PAC and KPI targets..</p>
+                        </div>
+                        <div class="story-block">
+                            <strong>The Build</strong>
+                            <p>Designed a modular data model and orchestrated Python ETL pipelines (local and on Azure). Automated validations, harmonized as-built data, and delivered analytics-ready outputs for reporting androot-cause diagnostics.</p>
+                        </div>
+                        <div class="project-outcome">
+                            <strong>Impact</strong>
+                            <p>Equipped engineers and asset managers with daily performance metrics, enabling faster commissioning tests across ~1.2 GW portfolio and sustained operational excellence.</p>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Azure Orchestration</span>
+                        <span class="tag">dbt</span>
+                        <span class="tag">SCADA Analytics</span>
+                        <span class="tag">Quality Monitoring</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ayosamuel/solarpv-analytics-etl-pipeline" target="_blank" rel="noopener">View GitHub repo</a>
                     </div>
                 </article>
 
-                <!-- --- PROJECT 3: Predictive & Root Cause Analysis Models --- -->
                 <article class="project-card">
-                    <h3>Predictive Analysis of Solar PV Systems</h3>
-                    <p>Developed statistical and machine learning models for predictive and root cause analysis of Solar PV system topics, including soiling loss, overload ratios, and inverter string distribution.</p>
-                   <p class="project-impact"><strong>Key Result:</strong> Produced key insights into component efficiency and temperature effects, directly informing operational strategy and future design optimization.</p>
-                    
-                   <!-- ACTION: Replace this div with an image or video -->
-                    <div class="project-visual-placeholder">Visual Placeholder: Graph of Soiling Loss Analysis</div>
-                    
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python</span><span class="tech-tag">Machine Learning</span><span class="tech-tag">Statistical Modelling</span>
+                    <div class="project-header">
+                        <span>ib vogt GmbH • Portfolio Risk Visualization</span>
+                        <h3>Technical Complexity Index & Executive Dashboard</h3>
                     </div>
-                     <div class="project-links">
-                        <!-- ACTION: Replace '#' with the link to this project's sanitized GitHub repo -->
-                         <a href="#" class="project-button" target="_blank">View on GitHub</a>
+                    <img class="project-image" src="assets/images/Technical-Complexity-model.png" alt="Placeholder visual for Technical Complexity Index & Executive Dashboard">
+                    <div class="project-story">
+                        <div class="story-block">
+                            <strong>The Challenge</strong>
+                            <p>Solar development leaders lacked a unified lens on technical risk. Planning discussions relied on static slide decks, making it hard to compare assets or prioritize resources.</p>
+                        </div>
+                        <div class="story-block">
+                            <strong>The Build</strong>
+                            <p>Engineered a Technical Complexity Index data model enriched with pipeline metadata, then delivered Power BI visuals that translated TCI insights into instantly consumable executive narratives.</p>
+                        </div>
+                        <div class="project-outcome">
+                            <strong>Impact</strong>
+                            <p>Drove portfolio-wide alignment on risk, unlocking proactive resourcing and more confident EPC handovers across multi-GW pipelines.</p>
+                        </div>
                     </div>
-                </article>
-                
-                 <!-- --- PROJECT 4: Volunteer Process Automation --- -->
-                <article class="project-card">
-                    <h3>Process Automation & Database Development</h3>
-                    <p>As a volunteer, developed an automated system for project management and efficient communication using Microsoft tools, alongside a Python-based tool to process and sort text by meaning and language.</p>
-                   <p class="project-impact"><strong>Key Result:</strong> Led to timely project implementation and an overall increase in process efficiency and data security for a multi-lingual audience.</p>
-                   
-                    <!-- ACTION: Replace this div with an image or video -->
-                    <div class="project-visual-placeholder">Visual Placeholder: Flowchart of the Automation Logic</div>
-                    
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python</span><span class="tech-tag">Power Automate</span><span class="tech-tag">Microsoft Forms</span><span class="tech-tag">Databases</span>
+                    <div class="project-tags">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">Data Modeling</span>
+                        <span class="tag">Azure Data Factory</span>
+                        <span class="tag">Analytics Engineering</span>
                     </div>
-                     <div class="project-links">
-                        <!-- ACTION: Replace '#' with the link to this project's sanitized GitHub repo -->
-                        <a href="#" class="project-button" target="_blank">View on GitHub</a>
+                    <div class="project-links">
+                        <a href="assets/docs/technical-complexity-summary.pdf" target="_blank" rel="noopener">Download project summary</a>
+                        <a href="mailto:ayo.adenigba@leitway.com">Discuss governance approach</a>
                     </div>
                 </article>
 
             </div>
         </section>
 
-        <!-- SKILLS SECTION -->
-        <section id="skills">
-            <h2>Core Competencies</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Technical Skills</h3>
-                    <ul class="skill-list">
-                        <li><strong>Programming & Data:</strong> Python (OOP & Data), PySpark, Git & Github</li>
-                        <li><strong>Databases:</strong> SQL Server, Snowflake, PostgreSQL, Mongo DB</li>
-                        <li><strong>Cloud Platforms:</strong> Azure Data Factory, Synapses Analytics, Fabric, Dataverse</li>
-                        <li><strong>DE & BI Tools:</strong> Dbt, Airflow, Power Automate, Power BI, Excel, Tableau</li>
-                        <li><strong>Domain Specific:</strong> PVsyst, SCADA layout & infrastructure Integration</li>
+        <section id="strengths">
+            <h2>Signature Strengths</h2>
+            <div class="strengths-grid">
+                <div class="strength-card">
+                    <h3>Analytics Engineering & Automation</h3>
+                    <ul>
+                        <li>Python, Azure Data Factory, Logic Apps, Airflow, dbt</li>
+                        <li>Data governance, automated QA, CI/CD for analytics</li>
+                        <li>Feature engineering for forecasting and diagnostics</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3>Professional Skills</h3>
-                    <ul class="skill-list">
-                        <li>Data Pipeline & Model Development</li>
-                        <li>Analytics Engineering</li>
-                        <li>Database/warehouse Development</li>
-                        <li>Power Apps & Automate Development</li>
-                        <li>SCADA & IoT System analytics</li>
-                        <li>Solar Power System modelling & Analysis</li>
-                        <li>Statistical & Machine learning modelling</li>
-                        <li>OOP (Object Oriented programming)</li>
+                <div class="strength-card">
+                    <h3>Power Platform Craftsmanship</h3>
+                    <ul>
+                        <li>Power Apps (model + canvas), Dataverse, ALM</li>
+                        <li>Power Automate workflows & digital process design</li>
+                        <li>Power BI (DAX, Power Query, paginated reporting)</li>
+                    </ul>
+                </div>
+                <div class="strength-card">
+                    <h3>Renewable Energy Domain Expertise</h3>
+                    <ul>
+                        <li>Solar PV modelling, SCADA integration, performance KPIs</li>
+                        <li>Commissioning analytics and EPC/O&M stakeholder alignment</li>
+                        <li>Portfolio simulation support across multi-GW assets</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT SECTION -->
-        <section id="contact" class="contact">
-             <h2>Get In Touch</h2>
-             <p>I am actively exploring new opportunities and welcome the chance to discuss how my skills and experience can benefit your team.<br>Please feel free to reach out via email or connect with me on LinkedIn.</p>
-             <a href="mailto:ayo.adenigba@leitway.com" class="project-button">ayo.adenigba@leitway.com</a>
+        <section id="experience">
+            <h2>Experience Snapshot</h2>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <h3>Data Analytics Engineer — ib vogt GmbH</h3>
+                    <div class="timeline-meta">Berlin, Germany • Jul 2022 – May 2025</div>
+                    <p>Led productized analytics capabilities for global engineering teams, from meteorological data hubs to predictive SCADA pipelines and portfolio risk dashboards.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Data Analyst — ib vogt GmbH</h3>
+                    <div class="timeline-meta">Berlin, Germany • Sep 2020 – Jun 2022</div>
+                    <p>Developed predictive modules, fault detection, and operational intelligence for utility-scale solar assets powering design and O&M decisions.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Solar PV Modelling & Technical Sales Engineer — Nexgen Energy</h3>
+                    <div class="timeline-meta"> Nigeria • Dec 2016 – Aug 2019</div>
+                    <p>Guided end-to-end project development for behind-the-meter PV and storage systems, aligning financial models with on-site engineering execution.</p>
+                </div>
+            </div>
         </section>
 
+        <section id="credentials">
+            <h2>Selected Certifications & Learning</h2>
+            <div class="certifications">
+                <div class="cert-card">Microsoft Certified • Power Platform Consultant</div>
+                <div class="cert-card">Microsoft • Fabric Analytics Engineer</div>
+                <div class="cert-card">Datacamp • Data Engineer Career Track</div>
+                <div class="cert-card">Udemy • Business Intelligence Analyst</div>
+                <div class="cert-card">Technical University Berlin • Digitalization of Intelligent & Integrated Energy Systems</div>
+                <div class="cert-card">Engineering Institute of Technology • Big Data Analytics in Electricity Grids</div>
+                <div class="cert-card">Renewable Academy • Solar PV Professional</div>
+                <div class="cert-card">FSR European University Institute • European Electricity Market Regulation</div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Let’s Build The Next Impact Story</h2>
+            <p>I am open to strategic analytics engineering roles, Power Platform mandates, and advisory collaborations where renewable energy, data, and operational excellence intersect.</p>
+            <a href="mailto:ayo.adenigba@leitway.com">ayo.adenigba@leitway.com</a>
+        </section>
+
+    </main>
+
+    <div class="lightbox" id="image-lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+        <button type="button" aria-label="Close image preview">&times;</button>
+        <img src="" alt="">
     </div>
 
-    <!-- FOOTER -->
+    <script>
+        const lightbox = document.getElementById('image-lightbox');
+        const lightboxImage = lightbox.querySelector('img');
+        const closeButton = lightbox.querySelector('button');
+
+        function openLightbox(event) {
+            lightboxImage.src = event.currentTarget.src;
+            lightboxImage.alt = event.currentTarget.alt;
+            lightbox.classList.add('is-visible');
+            lightbox.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('is-visible');
+            lightbox.setAttribute('aria-hidden', 'true');
+            lightboxImage.src = '';
+            lightboxImage.alt = '';
+        }
+
+        document.querySelectorAll('.project-image').forEach(img => {
+            img.addEventListener('click', openLightbox);
+            img.setAttribute('role', 'button');
+            img.setAttribute('tabindex', '0');
+            img.addEventListener('keydown', e => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openLightbox({ currentTarget: img });
+                }
+            });
+        });
+
+        closeButton.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', e => {
+            if (e.target === lightbox) closeLightbox();
+        });
+        window.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && lightbox.classList.contains('is-visible')) closeLightbox();
+        });
+    </script>
+
     <footer>
-        <p>© 2024 Samuel Adenigba | Built with HTML & CSS</p>
+        © 2025 Leitway Analytics — Imagine | Implement | Inspire.
     </footer>
 
 </body>
