@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayokunle Samuel Adenigba | Analytics Engineer & Power Platform Consultant</title>
+    <title>Ayokunle Samuel Adenigba | Analytics Professional </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -455,18 +455,324 @@
         }
 
         @media (max-width: 768px) {
+            :root {
+                --radius-lg: 16px;
+            }
+
+            .page-shell {
+                padding: 0 16px 60px;
+            }
+
             header.hero {
                 border-bottom-left-radius: 36px;
                 border-bottom-right-radius: 36px;
-                padding: 72px 24px;
+                padding: 60px 16px 64px;
+            }
+
+            .hero::after {
+                width: 240px;
+                height: 240px;
+                inset: 15% -15% auto auto;
+            }
+
+            .hero-content {
+                gap: 36px;
             }
 
             h1 {
-                font-size: 2.6rem;
+                font-size: 2.4rem;
+                letter-spacing: 0.02em;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+                margin-bottom: 18px;
+            }
+
+            h3 {
+                font-size: 1.25rem;
+            }
+
+            .hero-intro {
+                max-width: 100%;
+            }
+
+            .hero-eyebrow {
+                font-size: 0.85rem;
+                padding: 8px 16px;
+            }
+
+            .hero-intro h1 {
+                margin-top: 18px;
+                margin-bottom: 16px;
+            }
+
+            .hero-subhead {
+                font-size: 1rem;
+            }
+
+            .hero-metrics {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 12px;
+            }
+
+            .metric-card {
+                padding: 18px;
+                border-radius: 14px;
+            }
+
+            .metric-card h3 {
+                font-size: 2rem;
+                margin-bottom: 4px;
+            }
+
+            .metric-card span {
+                font-size: 0.85rem;
+            }
+
+            .cta-button {
+                padding: 12px 18px;
+                font-size: 0.95rem;
+                width: 100%;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            section {
+                margin-top: 60px;
+            }
+
+            .section-intro {
+                font-size: 1rem;
+                max-width: 100%;
             }
 
             .project-card {
-                padding: 32px;
+                padding: 24px;
+                gap: 18px;
+                border-radius: 16px;
+            }
+
+            .project-header span {
+                font-size: 0.7rem;
+                letter-spacing: 0.1em;
+            }
+
+            .project-story {
+                gap: 14px;
+            }
+
+            .story-block {
+                padding-left: 14px;
+                border-left-width: 2px;
+            }
+
+            .story-block strong {
+                font-size: 0.88rem;
+            }
+
+            .story-block p {
+                font-size: 0.95rem;
+            }
+
+            .project-outcome {
+                padding: 16px;
+                border-radius: 12px;
+            }
+
+            .project-tags {
+                gap: 8px;
+            }
+
+            .tag {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+                border-radius: 12px;
+            }
+
+            .project-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .project-links a {
+                display: block;
+                text-align: center;
+                padding: 10px 16px;
+                background: var(--sky);
+                border-radius: 10px;
+                border-bottom: none;
+            }
+
+            .project-links a:hover {
+                background: var(--royal);
+                color: #fff;
+            }
+
+            .strengths-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+                margin-top: 36px;
+            }
+
+            .strength-card {
+                padding: 20px;
+                border-radius: 14px;
+            }
+
+            .strength-card h3 {
+                margin-bottom: 12px;
+            }
+
+            .strength-card ul {
+                margin-top: 12px;
+                gap: 8px;
+            }
+
+            .strength-card ul li {
+                font-size: 0.95rem;
+            }
+
+            .experience-timeline {
+                gap: 16px;
+                margin-top: 32px;
+            }
+
+            .timeline-item {
+                padding: 18px 20px;
+                border-left-width: 3px;
+                border-radius: 0 12px 12px 0;
+            }
+
+            .timeline-item h3 {
+                margin-bottom: 4px;
+                font-size: 1.15rem;
+            }
+
+            .timeline-meta {
+                font-size: 0.88rem;
+            }
+
+            .timeline-item p {
+                margin-top: 8px;
+                font-size: 0.95rem;
+            }
+
+            .certifications {
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                gap: 12px;
+                margin-top: 32px;
+            }
+
+            .cert-card {
+                padding: 16px;
+                font-size: 0.88rem;
+                border-radius: 12px;
+            }
+
+            .contact-section {
+                padding: 32px 20px;
+                margin-top: 54px;
+                gap: 14px;
+            }
+
+            .contact-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .contact-section p {
+                font-size: 0.95rem;
+            }
+
+            .contact-section a {
+                padding: 10px 20px;
+                font-size: 0.95rem;
+                width: 100%;
+            }
+
+            .impact-strip {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .impact-card {
+                padding: 18px;
+            }
+
+            footer {
+                padding: 24px 16px 40px;
+                font-size: 0.88rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-shell {
+                padding: 0 12px 50px;
+            }
+
+            header.hero {
+                padding: 48px 12px 52px;
+                border-bottom-left-radius: 24px;
+                border-bottom-right-radius: 24px;
+            }
+
+            .hero::after {
+                width: 180px;
+                height: 180px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            .hero-metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .metric-card h3 {
+                font-size: 1.8rem;
+            }
+
+            .project-card {
+                padding: 18px;
+                border-radius: 12px;
+            }
+
+            .project-tags {
+                gap: 6px;
+            }
+
+            .tag {
+                padding: 5px 10px;
+                font-size: 0.75rem;
+            }
+
+            .strengths-grid {
+                gap: 14px;
+            }
+
+            .strength-card {
+                padding: 16px;
+            }
+
+            .contact-section {
+                padding: 24px 16px;
+            }
+
+            .cta-button {
+                padding: 11px 16px;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -476,18 +782,18 @@
     <header class="hero">
         <div class="hero-content">
             <div class="hero-intro">
-                <span class="hero-eyebrow"> Data Analytics Engineer • Freelancer </span>
+                <span class="hero-eyebrow"> Data Analytics Professional </span>
                 <h1>Ayokunle Samuel Adenigba</h1>
                 <p class="hero-subhead"></p>
                 <div class="hero-cta">
-                    <a class="cta-button cta-primary" href="CV_AyoDataAnalyticsAzure_PowerAppsPlatform_py_FreelancerEnterpreneur.pdf" target="_blank" rel="noopener">Download Master CV</a>
+                    <a class="cta-button cta-primary" href="CV_presention_Ayo_Data_Analytics_Professional_complete.pdf" target="_blank" rel="noopener">Download Master CV</a>
                     <a class="cta-button cta-secondary" href="https://www.linkedin.com/in/samuel-adenigba-18ab4997/" target="_blank" rel="noopener">LinkedIn Profile</a>
                 </div>
             </div>
             <div class="hero-metrics">
                 <div class="metric-card">
                     <h3>>15</h3>
-                    <span> projects analytics delivered for ~1.5GW combined solar PV assets</span>
+                    <span> projects analytics delivered</span>
                 </div>
                 <div class="metric-card">
                     <h3>50%</h3>
@@ -495,7 +801,7 @@
                 </div>
                 <div class="metric-card">
                     <h3>8+ yrs</h3>
-                    <span>Delivering enterprise analytics and business solutions</span>
+                    <span>Delivering analytics for telemetry data and Renewable Energy business domains</span>
                 </div>
             </div>
         </div>
@@ -506,13 +812,50 @@
         <section id="about">
             <h2>Professional Signature</h2>
             <p class="section-intro">With modern data engineering and analytics practices, I transform business requirements into structured data and reliable insights that move critical decisions forward days or weeks faster.
-                I also design and implement buisness process automations and applications on Microsoft Power Platform for commercial stakeholders with Microsoft/Azure ecosystem. Domain expertise in renewable energy projects, time-series simulation and performance analytics for utility-scale solar PV assets.
+                I also design and implement digital process automations and applications on Microsoft Power Platform for commercial stakeholders within the Microsoft/Azure ecosystem .
         </section>
 
         <section id="projects">
             <h2>Data Solutions Narratives</h2>
             
             <div class="projects-grid">
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <span>Compliance & Contractual Analytics</span>
+                        <h3>End-to-End ELT Platform for telemetry analytics</h3>
+                    </div>
+                    <img class="project-image" src="assets/images/elt-compliance-platform.png" alt="Placeholder visual for ELT Compliance Analytics Platform">
+                    <div class="project-story">
+                        <div class="story-block">
+                            <strong>The Challenge</strong>
+                            <p>Post-construction site analysis and workflows were fragmented across spreadsheets and manual calculations. Company faced compliance risks from audit trail gaps, data lineage transparency failures, and conflicting milestone reporting across stakeholders, consuming 30+ hours/month per site in validation.</p>
+                        </div>
+                        <div class="story-block">
+                            <strong>The Build</strong>
+                            <p>Architected an end-to-end (ELT) analytics platform using Azure Delta Lake, Databricks, dbt, and Power BI. Implemented the Lakehouse medallion architecture (bronze/silver/gold) with triggered incremental ingestion and OpenAI API-driven contractual clause extraction and comprehensive data quality validation.</p>
+                        </div>
+                        <div class="project-outcome">
+                            <strong>Impact</strong>
+                            <p>Accelerated milestone reporting from 2–3 weeks per site to 2-3 days. Enabled reproducible, auditable compliance assessments. stakeholders gained actionable root-cause and predictive diagnostics, eliminating disputes and enabling early intervention.</p>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Azure Delta Lake</span>
+                        <span class="tag">Databricks</span>
+                        <span class="tag">dbt</span>
+                        <span class="tag">Power BI</span>
+                        <span class="tag">OpenAI API</span>
+                        <span class="tag">Lakehouse Architecture</span>
+                        <span class="tag">Unity Catalog</span>
+                        <span class="tag">Bicep IaC</span>
+                        <span class="tag">Azure DevOps CI/CD</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ayosamuel/solar-pv-projects-intelligence" target="_blank" rel="noopener">View GitHub repo</a>
+                        <a href="mailto:ayo.adenigba@leitway.com">Discuss architecture</a>
+                    </div>
+                </article>
 
                 <article class="project-card">
                     <div class="project-header">
