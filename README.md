@@ -42,6 +42,7 @@ An advanced analytics platform designed to optimize utility-scale solar PV opera
 #### Technical Stack
 
 - **Languages**: Python
+- **Libraries & Frameworks**: pandas (data manipulation), scikit-learn (machine learning), numpy (numerical computing)
 - **Cloud Platform**: Azure (Orchestration & Data Processing)
 - **Data Transformation**: dbt (data build tool)
 - **Analytics**: SCADA data processing, Performance KPI calculations
@@ -56,8 +57,8 @@ An advanced analytics platform designed to optimize utility-scale solar PV opera
 
 ## 🔗 Related Repositories
 
-- [Solar PV Projects Intelligence](https://github.com/ayosamuel/solar-pv-projects-intelligence)
-- [Solar PV Analytics ETL Pipeline](https://github.com/ayosamuel/solarpv-analytics-etl-pipeline)
+- [Solar PV Projects Intelligence](https://github.com/ayosamuel/solar-pv-projects-intelligence) - Data management platform for solar PV project information
+- [Solar PV Analytics ETL Pipeline](https://github.com/ayosamuel/solarpv-analytics-etl-pipeline) - Production-ready ETL pipeline for SCADA data processing and analytics automation
 
 ## 📫 Contact
 
