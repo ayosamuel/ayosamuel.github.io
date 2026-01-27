@@ -811,7 +811,7 @@
 
         <section id="about">
             <h2>Professional Signature</h2>
-            <p class="section-intro">With modern data engineering and analytics practices, I transform business requirements into structured data and reliable insights that move critical decisions forward days or weeks faster.
+            <p class="section-intro">With modern analytics engineering practices, I transform business requirements into structured data and reliable insights that move critical decisions forward days or weeks faster.
                 I also design and implement digital process automations and applications on Microsoft Power Platform for commercial stakeholders within the Microsoft/Azure ecosystem .
         </section>
 
@@ -822,34 +822,34 @@
 
                 <article class="project-card">
                     <div class="project-header">
-                        <span>Compliance & Contractual Analytics</span>
-                        <h3>End-to-End ELT Platform for telemetry analytics</h3>
+                        <span>PAC/FAC Performance Compliance</span>
+                        <h3>Solar PV Analytics & Market Intelligence Platform</h3>
                     </div>
-                    <img class="project-image" src="assets/images/elt-compliance-platform.png" alt="Placeholder visual for ELT Compliance Analytics Platform">
+                    <img class="project-image" src="assets/images/elt-compliance-platform.png" alt="Placeholder visual for Solar PV Analytics Platform">
                     <div class="project-story">
                         <div class="story-block">
                             <strong>The Challenge</strong>
-                            <p>Post-construction site analysis and workflows were fragmented across spreadsheets and manual calculations. Company faced compliance risks from audit trail gaps, data lineage transparency failures, and conflicting milestone reporting across stakeholders, consuming 30+ hours/month per site in validation.</p>
+                            <p>PAC/FAC testing (€1,000–€100,000+ penalties per 0.1% shortfall) required rigorous performance validation within 2–6 weeks of energization. Manual Excel workflows, fragmented SCADA data, and multi-stakeholder disputes consumed 40+ hours/month per site with zero audit trail.</p>
                         </div>
                         <div class="story-block">
                             <strong>The Build</strong>
-                            <p>Architected an end-to-end (ELT) analytics platform using Azure Delta Lake, Databricks, dbt, and Power BI. Implemented the Lakehouse medallion architecture (bronze/silver/gold) with triggered incremental ingestion and OpenAI API-driven contractual clause extraction and comprehensive data quality validation.</p>
+                            <p>Built purpose-built compliance platform: Logic Apps ingest raw telemetry (5–60 min granularity) → ADLS lakehouse bronze/silver/gold → dbt IEC 61724 PR calculations and data quality checks → Power BI PAC/FAC dashboard with GPT-powered contract extraction and pass/fail forecasting.</p>
                         </div>
                         <div class="project-outcome">
                             <strong>Impact</strong>
-                            <p>Accelerated milestone reporting from 2–3 weeks per site to 2-3 days. Enabled reproducible, auditable compliance assessments. stakeholders gained actionable root-cause and predictive diagnostics, eliminating disputes and enabling early intervention.</p>
+                            <p>Deployment time: 1–2 weeks per site (vs. 6–8 weeks). Bulletproof audit trail eliminated "your spreadsheet vs. mine" disputes. Portfolio managers gained reproducible framework across 100+ sites; post-construction teams saved 40 hours/month on validation.</p>
                         </div>
                     </div>
                     <div class="project-tags">
-                        <span class="tag">Azure Delta Lake</span>
+                        <span class="tag">Azure Logic Apps</span>
+                        <span class="tag">ADLS Gen2</span>
                         <span class="tag">Databricks</span>
-                        <span class="tag">dbt</span>
+                        <span class="tag">Fault Detection</span>
                         <span class="tag">Power BI</span>
-                        <span class="tag">OpenAI API</span>
-                        <span class="tag">Lakehouse Architecture</span>
-                        <span class="tag">Unity Catalog</span>
+                        <span class="tag">Azure OpenAI</span>
+                        <span class="tag">Form Recognizer</span>
                         <span class="tag">Bicep IaC</span>
-                        <span class="tag">Azure DevOps CI/CD</span>
+                        <span class="tag">Azure DevOps</span>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/ayosamuel/solar-pv-projects-intelligence" target="_blank" rel="noopener">View GitHub repo</a>
@@ -892,33 +892,37 @@
 
                 <article class="project-card">
                     <div class="project-header">
-                        <span>SCADA & Sensor Data Analytics</span>
-                        <h3>Solar Performance Pipeline and Analytics</h3>
+                        <span>ML-Powered Operational Analytics</span>
+                        <h3>Predictive Fault Detection & Energy Loss Analysis</h3>
                     </div>
                     <img class="project-image" src="assets/images/solar-performance-pipeline.png" alt="Placeholder visual for Solar Performance Pipeline and Analytics">
                     <div class="project-story">
                         <div class="story-block">
                             <strong>The Challenge</strong>
-                            <p>Performance tests reporting was fragmented across managers and regions; site and SCADA data and systems format varied across different providers; analytics were manual and slow; stakeholders (asset owners, advisors, EPC, O&M) needed timely, defensible results to hit PAC and KPI targets..</p>
+                            <p>Rising project kWp, cross-region deployments, and string/inverter-level granularity pushed analysis beyond Excel; teams needed defensible descriptive and predictive analytics that could scale without duplicate scripts or manual reporting bottlenecks.</p>
                         </div>
                         <div class="story-block">
                             <strong>The Build</strong>
-                            <p>Designed a modular data model and orchestrated Python ETL pipelines (local and on Azure). Automated validations, harmonized as-built data, and delivered analytics-ready outputs for reporting androot-cause diagnostics.</p>
+                            <p>Modular ETL with supervised ML and Python fault rules; statistical root-cause analysis; config-driven workflow generates automated PR, capacity, and anomaly reports in minutes.</p>
                         </div>
                         <div class="project-outcome">
                             <strong>Impact</strong>
-                            <p>Equipped engineers and asset managers with daily performance metrics, enabling faster commissioning tests across ~1.2 GW portfolio and sustained operational excellence.</p>
+                            <p>60% faster analysis (2–3 days → 2 hours); Automated report generation. Early intervention alerts and quantified energy-loss predictions prevented €100K+ annual losses on assets.</p>
                         </div>
                     </div>
                     <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Azure Orchestration</span>
-                        <span class="tag">dbt</span>
-                        <span class="tag">SCADA Analytics</span>
-                        <span class="tag">Quality Monitoring</span>
+                        <span class="tag">Python ETL</span>
+                        <span class="tag">Scikit-Learn</span>
+                        <span class="tag">Fault Detection</span>
+                        <span class="tag">Statistical Analysis</span>
+                        <span class="tag">Pandas/NumPy</span>
+                        <span class="tag">Automated Reporting</span>
+                        <span class="tag">SCADA Integration</span>
+                        <span class="tag">Root Cause Assessment</span>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/ayosamuel/solarpv-analytics-etl-pipeline" target="_blank" rel="noopener">View GitHub repo</a>
+                        <a href="mailto:ayo.adenigba@leitway.com">Discuss ML approach</a>
                     </div>
                 </article>
 
