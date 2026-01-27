@@ -86,10 +86,10 @@ Data Analytics Engineer with 8+ years of experience delivering production-grade 
 - dbt-powered transformation layer with data quality tests
 
 **Impact**
-- Reduced milestone reporting time from 2-3 weeks to 2-3 days per site
+- Transformed post-construction analysis from weeks to days, improving stakeholder confidence
 - Eliminated data lineage transparency failures and compliance risks
-- Enabled reproducible, auditable compliance assessments
-- Freed 30+ hours/month per site in manual validation work
+- Enabled reproducible, auditable compliance assessments across all project sites
+- Freed 30+ hours/month per site in manual validation work, reducing compliance audit overhead
 
 **Technologies**: Azure Delta Lake, Databricks, dbt, Power BI, OpenAI API, Unity Catalog, Bicep IaC, Azure DevOps CI/CD
 
@@ -193,7 +193,7 @@ Data Analytics Engineer with 8+ years of experience delivering production-grade 
 Federal University of Technology, Akure
 
 **Certifications**
-- Renewable Academy • Solar PV Professional
+- Renewable Academy - Solar PV Professional
 - Microsoft Certified: Azure Data Engineer Associate
 - dbt Analytics Engineering Certification
 
